@@ -1,0 +1,34 @@
+# Android Bottom Bar
+
+![alt tag](/image.gif)
+
+### How to implements it
+
+1. Copy [BottomMenu.class and BottomMenuItem.class](/app/src/main/java/com/toong/androidbottombar/bottombar/) to your project
+2. Copy [bottom_menu.xml and bottom_menu_item.xml](/app/src/main/res/layout) to your layout folder
+3. Copy [bottom_bar_divider.xml](/app/src/main/res/drawable/bottom_bar_divider.xml) to your drawable folder
+3. Open your [bottom_menu.xml](/app/src/main/res/layout/bottom_menu.xml) then change
+```com.toong.androidbottombar.bottombar.BottomMenuItem``` to the correct ```BottomMenu``` path (for example: ```com.exampleproject.bottombar.BottomMenuItem```
+   
+4. Open your style.xml then add
+```
+<declare-styleable name="CustomViewStyle">
+  <attr format="string" name="title"/>
+  <attr format="reference" name="normalImage"/>
+  <attr format="reference" name="selectedImage"/>
+  <attr format="color" name="normalTitleColor"/>
+  <attr format="color" name="selectedTitleColor"/>
+</declare-styleable>
+```
+
+5. Open the layout of the Activity that you want to add BottomMenu
+```
+<com.toong.androidbottombar.bottombar.BottomMenu
+    android:id="@+id/bottom_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    />
+```
+
+
